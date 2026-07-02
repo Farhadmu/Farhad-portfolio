@@ -34,7 +34,7 @@ async function handleForm(e){
         'Authorization':'Bearer '+SUPABASE_ANON_KEY,
         'Prefer':'return=minimal'
       },
-      
+
       body:JSON.stringify({name:n.slice(0,100),email:em.slice(0,255),subject:sub?sub.slice(0,200):null,message:msg.slice(0,5000)})
     });
     if(!res.ok)throw new Error('Failed: '+res.status);
@@ -86,5 +86,14 @@ document.querySelectorAll('.skills-grid').forEach(el=>skillObs.observe(el));
   if(heroImg && aboutImg){
     const apply=()=>{aboutImg.src=heroImg.currentSrc||heroImg.src;};
     if(heroImg.complete) apply(); else heroImg.addEventListener('load',apply,{once:true});
+  }
+})();
+// Email protection - dynamically render email to prevent obfuscation
+(function(){
+  const emailDisplay = document.getElementById('email-display');
+  if(emailDisplay){
+    const user = 'mi0223937';
+    const domain = 'gmail.com';
+    emailDisplay.textContent = user + '@' + domain;
   }
 })();
