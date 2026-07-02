@@ -4,7 +4,7 @@ Personal portfolio website showcasing my projects, skills, and experience as a F
 
 ## 🌐 Live Site
 
-[Visit Portfolio](https://your-netlify-url.netlify.app)
+[Visit Portfolio](https://farhad-portfolio-gold.vercel.app/)
 
 ## 🛠️ Tech Stack
 
